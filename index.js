@@ -17,15 +17,15 @@ let weather={
         document.querySelector(".city").innerHTML="Weather in "+name;
         document.querySelector(".icon").src="http://openweathermap.org/img/wn/"+icon+".png";
         document.querySelector(".description").innerHTML=description;
-        document.querySelector(".temp").innerHTML=temp+"°C";
+        document.querySelector(".temp").innerHTML=temp+" °C";
         document.querySelector(".humidity").innerHTML="Humidity : "+humidity;
         document.querySelector(".wind").innerHTML="Wind speed: "+speed+"km/h";
-        document.querySelector(".weather").classList.remove("loading");
         document.body.style.backgroundImage="url('https://source.unsplash.com/1600x900/?"+name+"')"
 
     },
     search:function(){
         this.fetchWeather(document.querySelector(".search-bar").value);
+        
     }
 }
 

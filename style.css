@@ -1,15 +1,25 @@
-
+* {
+  padding: 0;
+  margin: 0;
+}
 
 body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 120%;
+  background-image: url(https://source.unsplash.com/1600x900/?landscape);
+}
+
+.container {
+  padding: 0;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
   height: 100vh;
-  font-size: 120%;  
-  background-image: url(https://source.unsplash.com/1600x900/?landscape);
+  max-height: 100vh;
+  max-width:100vw;
 }
+
 .card {
   background-color: #000000d0;
   color: white;
@@ -18,6 +28,7 @@ body {
   width: 100%;
   max-width: 300px;
   margin: 1px;
+  position: relative;
 }
 
 .search {
@@ -27,20 +38,22 @@ body {
 }
 
 button {
-  margin: 0.5em;
-  border-radius: 4em;
+  margin: 0.9em;
+  border-radius: 2em;
   border: none;
-  height: 33px;
-  width: 44px;
+  height: 34px;
+  width: 95px;
   outline: none;
   background: #7c7c7c2b;
   color: white;
   cursor: pointer;
   transition: 0.2s cubic-bezier(0, 0, 0.2, 1);
 }
+
 button:hover {
   background: #7c7c7c6b;
 }
+
 input.search-bar {
   border: none;
   outline: none;
@@ -60,31 +73,28 @@ h1.temp {
 
 .flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
-.flex {
-  display: flex;
-  align-items: center;
-}
+
 
 .description {
   text-transform: capitalize;
   margin-left: 8px;
 }
 
-.weather.loading::before{
+/* .weather.loading::before {
   visibility: hidden;
   max-height: 20px;
-  position: relative;
+  position: absolute;
 }
 
-/* .weather.loading::after {
+.weather.loading::after {
   visibility: visible;
   content: "Loading...";
   color: white;
   position: absolute;
-  top: 0;
-  left: 20px;
+  bottom: 6px;
+  left: 50px;
 } */
